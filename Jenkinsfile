@@ -22,7 +22,7 @@ pipeline{
             }
                        
         } 
-       stage("building the frontend code"){
+       stage("building the backend code"){
             steps{
                 echo "Building the Image"
                 sh "cd ${WORKSPACE}/frontend && docker build -t ghcr.io/ashish8800/inviecom-backend:latest ."
