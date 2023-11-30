@@ -1,0 +1,27 @@
+# GET all subcategory
+GET http://localhost:5000/api/inventory/subcategory
+
+
+### GET subcategory by ID
+GET http://localhost:5000/api/inventory/subcategory/SC78378
+
+
+### POST a new subcategory
+POST http://localhost:5000/api/inventory/subcategory
+Content-Type: application/json
+
+{
+  "name": "Sub Category New -3",
+  "categoryId":"C68745"
+}
+
+### PUT update subcategory by ID
+PUT http://localhost:5000/api/inventory/subcategory/SC27385
+Content-Type: application/json
+
+{
+  "name": "Subcategory 3"
+}
+
+### DELETE subcategory by ID
+DELETE http://localhost:5000/api/inventory/subcategory/SC27385

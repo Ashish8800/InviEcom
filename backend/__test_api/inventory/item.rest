@@ -1,0 +1,26 @@
+# GET all item
+GET http://localhost:5000/api/inventory/item
+
+
+### GET item by ID
+GET http://localhost:5000/api/inventory/item/C68745
+
+
+### POST a new item
+POST http://localhost:5000/api/inventory/item
+Content-Type: application/json
+
+{
+  "name": "item New Test-Test"
+}
+
+### PUT update item by ID
+PUT http://localhost:5000/api/inventory/item/C47210
+Content-Type: application/json
+
+{
+  "name": "item New Test-Test-Update"
+}
+
+### DELETE item by ID
+DELETE http://localhost:5000/api/inventory/item/C47210

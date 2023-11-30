@@ -1,0 +1,31 @@
+# GET all policy
+GET http://localhost:5000/api/settings/policy
+
+
+### GET policy by ID
+GET http://localhost:5000/api/settings/policy/T85077
+
+
+
+### POST a new policy
+POST http://localhost:5000/api/settings/policy
+Content-Type: application/json
+
+{
+  "name": "Policy2",
+  "description":"policy description",
+  "effectiveDate":"23/2/2023"
+  
+}
+
+### PUT update policy by ID
+PUT http://localhost:5000/api/settings/policy/T85077
+Content-Type: application/json
+
+{
+  "name": "policy New Test-Test-Update",
+  "rate":"10"
+}
+
+### DELETE policy by ID
+DELETE http://localhost:5000/api/settings/policy/T33327

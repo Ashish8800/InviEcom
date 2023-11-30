@@ -1,0 +1,26 @@
+# GET all manufeature
+GET http://localhost:5000/api/inventory/manufeature
+
+
+### GET manufeature by ID
+GET http://localhost:5000/api/inventory/manufeature/MFT31061
+
+
+### POST a new manufeature
+POST http://localhost:5000/api/inventory/manufeature
+Content-Type: application/json
+
+{
+  "name": "Sub Category New -3"
+}
+
+### PUT update manufeature by ID
+PUT http://localhost:5000/api/inventory/manufeature/MFT17040
+Content-Type: application/json
+
+{
+  "name": "Manufeature 4"
+}
+
+### DELETE manufeature by ID
+DELETE http://localhost:5000/api/inventory/manufeature/MFT31061

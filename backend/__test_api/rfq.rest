@@ -1,0 +1,27 @@
+# GET all warehouses
+GET http://localhost:5000/api/purchase/rfq
+
+# GET rfq by ID
+GET http://localhost:5000/api/purchase/rfq/123
+
+# POST a new rfq
+POST http://localhost:5000/api/purchase/rfq
+Content-Type: application/json
+
+{
+  "vedor": "ajay",
+  "prRequestId": "PR0001123456",
+  
+}
+
+# PUT update rfq by ID
+PUT http://localhost:5000/api/purchase/rfq/123
+Content-Type: application/json
+
+{
+   "vedor": "ajay",
+  "prRequestId": "456 Second Ave",
+}
+
+# DELETE rfq by ID
+DELETE http://localhost:5000/api/purchase/rfq/123

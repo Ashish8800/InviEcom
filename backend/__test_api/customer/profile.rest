@@ -1,0 +1,20 @@
+# GET all contact
+GET http://localhost:5000/api/customer/profile
+
+
+### GET profile by ID
+GET http://localhost:5000/api/customer/profile/C8175203544
+
+
+
+
+### PUT update profile by ID
+PUT http://localhost:5000/api/customer/profile/C2444682052
+Content-Type: application/json
+
+{
+  "name": "profile cc (Updated)"
+}
+
+### DELETE profile by ID
+DELETE http://localhost:5000/api/customer/profile/C2444682052

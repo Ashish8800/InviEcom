@@ -1,0 +1,32 @@
+# GET all tax
+GET http://localhost:5000/api/settings/gst/
+
+
+# ### GET tax by ID
+# GET http://localhost:5000/api/settings/gst/tax/T85077
+
+
+
+### POST a new tax
+POST http://localhost:5000/api/settings/gst/tax
+Content-Type: application/json
+
+{
+  "name": "GST227",
+  "rate":"34"
+}
+
+### PUT update policy by ID
+PUT http://localhost:5000/api/settings/gst/tax/TAX788
+Content-Type: application/json
+
+{
+  "name": "policy New Test-Test-Update",
+  "rate":"10"
+}
+
+
+
+### DELETE policy by ID
+DELETE http://localhost:5000/api/settings/gst/tax/TAX788
+

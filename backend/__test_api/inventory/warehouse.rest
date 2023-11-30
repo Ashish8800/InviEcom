@@ -1,0 +1,34 @@
+# GET all warehouses
+GET http://localhost:5000/api/inventory/warehouse
+
+
+### GET warehouse by ID
+GET http://localhost:5000/api/inventory/warehouse/WH08571
+
+
+### POST a new warehouse
+POST http://localhost:5000/api/inventory/warehouse
+
+Content-Type: application/json
+
+{
+  "name": "Warehouse cc",
+  "contact": "8931916663",
+  "address": "hajratganj",
+  "city": "Lucknow",
+  "state":"uttar pradesh",
+  "country":"india",
+  "pincode":"206001",
+  "status":"active"
+}
+
+### PUT update warehouse by ID
+PUT http://localhost:5000/api/inventory/warehouse/WH23801
+Content-Type: application/json
+
+{
+  "name": "Warehouse cc (Updated)"
+}
+
+### DELETE warehouse by ID
+DELETE http://localhost:5000/api/inventory/warehouse/WH23801

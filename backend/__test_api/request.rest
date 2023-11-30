@@ -1,0 +1,28 @@
+# GET all warehouses
+GET http://localhost:5000/api/inventory/warehouse
+
+# GET warehouse by ID
+GET http://localhost:5000/api/inventory/warehouse/123
+
+# POST a new warehouse
+POST http://localhost:5000/api/inventory/warehouse
+Content-Type: application/json
+
+{
+  "name": "Warehouse A",
+  "location": "123 Main St",
+  "capacity": 1000
+}
+
+# PUT update warehouse by ID
+PUT http://localhost:5000/api/inventory/warehouse/123
+Content-Type: application/json
+
+{
+  "name": "Warehouse B",
+  "location": "456 Second Ave",
+  "capacity": 2000
+}
+
+# DELETE warehouse by ID
+DELETE http://localhost:5000/api/inventory/warehouse/123

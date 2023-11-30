@@ -1,0 +1,34 @@
+# GET all email
+GET http://localhost:5000/api/settings/email
+
+
+### GET email by ID
+GET http://localhost:5000/api/settings/email/T85077
+
+
+
+### POST a new email
+POST http://localhost:5000/api/settings/email
+Content-Type: application/json
+
+{
+  "host": "host1",
+  "port":"3001",
+  "email":"shrutiii@inevitableInfotech.com",
+  "password":"yshruti",
+  "default":"true"
+
+  
+}
+
+### PUT update email by ID
+PUT http://localhost:5000/api/settings/email/T85077
+Content-Type: application/json
+
+{
+  "name": "email New Test-Test-Update",
+  "rate":"10"
+}
+
+### DELETE email by ID
+DELETE http://localhost:5000/api/settings/email/T33327

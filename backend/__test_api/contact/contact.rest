@@ -1,0 +1,38 @@
+# GET all contact
+GET http://localhost:5000/api/web/contact
+
+
+### GET contact by ID
+GET http://localhost:5000/api/web/contact/WH08571
+
+
+### POST a new contact
+POST http://localhost:5000/api/web/contact
+Content-Type: application/json
+
+{
+  "name": "contact",
+  "email":"yshruti401@gmail.com",
+  "contact": "8931916663",
+  "buy": "electronic",
+  "company":"infotech",
+  "designation":"software design",
+  "industry":"electronic",
+  "customer":"reseller",
+  "address": "hajratganj",
+  "city": "Lucknow",
+  "state":"uttar pradesh",
+  "country":"india",
+  "status":"active"
+}
+
+### PUT update contact by ID
+PUT http://localhost:5000/api/web/contact/WH23801
+Content-Type: application/json
+
+{
+  "name": "contact cc (Updated)"
+}
+
+### DELETE contact by ID
+DELETE http://localhost:5000/api/web/contact/WH23801

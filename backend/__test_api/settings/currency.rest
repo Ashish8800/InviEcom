@@ -1,0 +1,30 @@
+# GET all currency
+GET http://localhost:5000/api/settings/currency
+
+
+### GET currency by ID
+GET http://localhost:5000/api/settings/currency/T85077
+
+
+
+### POST a new currency
+POST http://localhost:5000/api/settings/currency
+Content-Type: application/json
+
+{
+  "name": "dollar",
+  "symbol":"$"
+  
+}
+
+### PUT update currency by ID
+PUT http://localhost:5000/api/settings/currency/T85077
+Content-Type: application/json
+
+{
+  "name": "currency New Test-Test-Update",
+  "rate":"10"
+}
+
+### DELETE currency by ID
+DELETE http://localhost:5000/api/settings/currency/T33327

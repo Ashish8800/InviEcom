@@ -1,0 +1,26 @@
+# GET all category
+GET http://localhost:5000/api/inventory/category
+
+
+### GET category by ID
+GET http://localhost:5000/api/inventory/category/C68745
+
+
+### POST a new category
+POST http://localhost:5000/api/inventory/category
+Content-Type: application/json
+
+{
+  "name": "Category New Test-Test"
+}
+
+### PUT update category by ID
+PUT http://localhost:5000/api/inventory/category/C47210
+Content-Type: application/json
+
+{
+  "name": "Category New Test-Test-Update"
+}
+
+### DELETE category by ID
+DELETE http://localhost:5000/api/inventory/category/C47210
