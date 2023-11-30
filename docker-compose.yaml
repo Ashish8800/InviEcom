@@ -1,8 +1,7 @@
 version: '3.0'
 services:
   backend: 
-    build:
-      context: ./backend
+    image: ghcr.io/ashish8800/inviecom-backend:latest
     container_name: inviEcom_backend 
     env_file:
        - ./backend/.env
@@ -11,8 +10,7 @@ services:
      - "5106:5106"
   frontend:
       container_name: inviEcom_frontend
-      build:
-        context: ./frontend
+    image: ghcr.io/ashish8800/inviecom-frontend:latest
       env_file:
       - ./frontend/.env
       depends_on:
