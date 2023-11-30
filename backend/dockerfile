@@ -4,6 +4,6 @@ COPY package*.json ./
 RUN npm i
 COPY . .
 
-EXPOSE 5000
+EXPOSE 5106
 
 CMD [ "node", "server.js" ]
