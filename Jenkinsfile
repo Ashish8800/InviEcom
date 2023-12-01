@@ -35,7 +35,7 @@ pipeline{
             steps{
                 echo "Pushing the Image"
                 sh "export CR_PAT=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"
-                sh "echo $GITHUB_TOKEN_PSW | docker login ghcr.io -u $GITHUB_TOKEN_USR --password-stdin"
+                sh "echo $CR_PAT | docker login ghcr.io -u Ashish8800 --password-stdin"
                 sh "docker push ghcr.io/ashish8800/inviecom-frontend:latest"
                 sh "docker push ghcr.io/ashish8800/inviecom-backend:latest"
                 
