@@ -10,7 +10,7 @@ pipeline{
         stage("Clone Code"){
             steps{
                 echo "Cloning the code"
-                git branch: 'main', credentialsId: 'ashish_git', url: 'https://github.com/Ashish8800/InviEcom'
+                git branch: 'main', credentialsId: 'token_ashish', url: 'https://github.com/Ashish8800/InviEcom'
             }
             
         }
