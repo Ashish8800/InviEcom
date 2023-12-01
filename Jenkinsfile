@@ -2,7 +2,7 @@ pipeline{
     agent any
     
     environment {
-        GITHUB_TOKEN= credentials('ashish_git')
+        GITHUB_TOKEN= credentials('token_ashish')
         PATH = "$PATH:/usr/bin" // Add the directory where docker-compose is installed
     }
     
@@ -34,7 +34,7 @@ pipeline{
         stage("Push to Docker Hub"){
             steps{
                 echo "Pushing the Image"
-                sh "export CR_PAT=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"
+                sh "export CR_PAT=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"
                 sh "echo $CR_PAT | docker login ghcr.io -u Ashish8800 --password-stdin"
                 sh "docker push ghcr.io/ashish8800/inviecom-frontend:latest"
                 sh "docker push ghcr.io/ashish8800/inviecom-backend:latest"
