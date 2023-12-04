@@ -12,11 +12,11 @@ services:
     container_name: inviEcom_frontend
     image: ghcr.io/ashish8800/inviecom2-frontend
     env_file:
-      - ./frontend/.env
-      depends_on:
+       - ./frontend/.env
+    depends_on:
       - backend
       restart: on-failure    
-      ports:
+    ports:
       - "3106:3106"           
 
       
