@@ -14,9 +14,9 @@ services:
     env_file:
        - ./frontend/.env
     depends_on:
-      - backend
+       - backend
       restart: on-failure    
     ports:
-      - "3106:3106"           
+       - "3106:3106"           
 
       
