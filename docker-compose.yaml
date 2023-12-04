@@ -11,7 +11,7 @@ services:
   frontend:
     container_name: inviEcom_frontend
     image: ghcr.io/ashish8800/inviecom2-frontend
-      env_file:
+    env_file:
       - ./frontend/.env
       depends_on:
       - backend
