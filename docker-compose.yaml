@@ -4,19 +4,19 @@ services:
     image: ghcr.io/ashish8800/inviecom2-backend
     container_name: inviEcom_backend 
     env_file:
-       - ./backend/.env
+      - backend/.env
     restart: on-failure
     ports:
      - "5106:5106"
   frontend:
-    container_name: inviEcom_frontend
     image: ghcr.io/ashish8800/inviecom2-frontend
+    container_name: inviEcom_frontend
     env_file:
-       - ./frontend/.env
+      - frontend/.env
     depends_on:
-       - backend
+      - backend
       restart: on-failure    
     ports:
-       - "3106:3106"           
+      - "3106:3106"           
 
       
