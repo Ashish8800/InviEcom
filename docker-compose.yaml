@@ -18,6 +18,6 @@ services:
       - backend
     restart: on-failure    
     ports:
-      - "3106:3106"           
+      - "3110:3106"           
 
       
