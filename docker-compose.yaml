@@ -2,6 +2,7 @@ version: '3.0'
 services:
   backend: 
     image: ghcr.io/ashish8800/inviecom2-backend
+    network_mode: "host" 
     container_name: inviEcom_backend 
     env_file:
       - backend/.env
