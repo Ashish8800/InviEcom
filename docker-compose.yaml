@@ -1,7 +1,7 @@
 version: '3.0'
 services:
   backend: 
-    image: ghcr.io/ashish8800/inviecom2-backend
+    image: ghcr.io/ashish8800/inviecom2-backend:2
     network_mode: "host" 
     container_name: inviEcom_backend 
     env_file:
@@ -10,7 +10,7 @@ services:
     ports:
      - "5106:5106"
   frontend:
-    image: ghcr.io/ashish8800/inviecom2-frontend
+    image: ghcr.io/ashish8800/inviecom2-frontend:2
     container_name: inviEcom_frontend
     env_file:
       - frontend/.env
