@@ -3,7 +3,7 @@ services:
   backend: 
     image: ghcr.io/ashish8800/inviecom2-backend:2
     network_mode: "host" 
-    container_name: inviEcom_backend 
+    container_name: inviEcom_backend:2
     env_file:
       - backend/.env
     restart: on-failure
@@ -11,7 +11,7 @@ services:
      - "5106:5106"
   frontend:
     image: ghcr.io/ashish8800/inviecom2-frontend:2
-    container_name: inviEcom_frontend
+    container_name: inviEcom_frontend:2
     env_file:
       - frontend/.env
     depends_on:
