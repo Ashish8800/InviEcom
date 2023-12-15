@@ -16,32 +16,33 @@ pipeline{
             
         }
 
-        //  stage("building the frontend backend code"){
-        //     steps{
-        //         echo "Building the Image"
-        //         sh "cd ${WORKSPACE} && docker build -t ghcr.io/ashish8800/hawkbit:latest ."
-        //     }
+         stage("building the frontend backend code"){
+            steps{
+                echo "Building the Image"
+                sh "cd ${WORKSPACE} && docker build -t ghcr.io/ashish8800/inviecom-backend:latest ."
+            }
                        
-        // } 
-       // stage("building the backend code"){
-       //      steps{
-       //          echo "Building the Image"
-       //          sh "cd ${WORKSPACE}/backend && docker build -t ghcr.io/ashish8800/inviecom-backend:latest ."
-       //      }
+        } 
+       stage("building the backend code"){
+            steps{
+                echo "Building the Image"
+                sh "cd ${WORKSPACE}/backend && docker build -t ghcr.io/ashish8800/inviecom-backend:latest ."
+            }
                        
-       //  } 
+        } 
             
         
-        // stage("Push to Docker Hub"){
-        //     steps{
-        //         echo "Pushing the Image"
-        //         sh "export CR_PAT=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"
-        //         sh "echo $GITHUB_TOKEN_PSW | docker login ghcr.io -u $GITHUB_TOKEN_USR --password-stdin"
-        //         sh "docker push ghcr.io/ashish8800/hawkbit:latest"
+        stage("Push to Docker Hub"){
+            steps{
+                echo "Pushing the Image"
+                // sh "export CR_PAT=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"
+                // sh "echo $GITHUB_TOKEN_PSW | docker login ghcr.io -u $GITHUB_TOKEN_USR --password-stdin"
+                sh "docker push ghcr.io/ashish8800/inviecom-frontend:latest"
+                sh "docker push ghcr.io/ashish8800/inviecom-backend:latest"
                 
-        //     }
+            }
             
-        // }
+        }
         stage("Deploy"){
             steps{
                 echo "Deploying the Container"
