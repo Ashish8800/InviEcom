@@ -1,17 +1,17 @@
 version: '3.0'
 services:
   backend: 
-    image: ghcr.io/ashish8800/inviecom2-backend:2
+    image: ghcr.io/ashish8800/inviecom2-backend
     network_mode: "host" 
-    container_name: inviEcom_backend2
+    container_name: inviEcom_backend
     env_file:
       - backend/.env
     restart: on-failure
     ports:
      - "5106:5106"
   frontend:
-    image: ghcr.io/ashish8800/inviecom2-frontend:2
-    container_name: inviEcom_frontend2
+    image: ghcr.io/ashish8800/inviecom2-frontend
+    container_name: inviEcom_frontend
     env_file:
       - frontend/.env
     depends_on:
