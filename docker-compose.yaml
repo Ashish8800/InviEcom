@@ -1,12 +1,25 @@
 version: '3.0'
 services:
+
+  mongodb:
+    container_name: gem-mongodb2
+    image: mongo
+    restart: always
+    ports:
+      - "27031:27017"
+    networks:
+      - default-network
+    volumes:
+      - ./backend/mongoims-backup:/data/db
   backend: 
     image: ghcr.io/ashish8800/inviecom-backend
-    network_mode: "host" 
     container_name: inviEcom_backend2
     env_file:
       - backend/.env
     restart: on-failure
+    networks:
+      - default-network
+      - gem_frontend-network    
     ports:
      - "5106:5106"
   frontend:
@@ -16,8 +29,13 @@ services:
       - frontend/.env
     depends_on:
       - backend
-    restart: on-failure    
+    restart: on-failure
+    networks:
+      - gem_frontend-network    
     ports:
       - "3106:3106"           
 
       
+networks:
+  default-network:
+  gem_frontend-network:
