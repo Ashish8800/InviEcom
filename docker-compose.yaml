@@ -12,7 +12,7 @@ services:
     volumes:
       - ./backend/mongoims-backup:/data/db
   backend: 
-    image: ghcr.io/ashish8800/inviecom_beta-backend
+    image: ghcr.io/ashish8800/inviecom_beta-backend:v1.0.0
     container_name: inviEcom_beta_backend
     env_file:
       - backend/.env
@@ -23,7 +23,7 @@ services:
     ports:
      - "5106:5106"
   frontend:
-    image: ghcr.io/ashish8800/inviecom_beta-frontend
+    image: ghcr.io/ashish8800/inviecom_beta-frontend:v1.0.0
     container_name: inviEcom_beta_frontend
     env_file:
       - frontend/.env
