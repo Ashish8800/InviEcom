@@ -2,7 +2,7 @@ version: '3.0'
 services:
 
   mongodb:
-    container_name: inviecom-mongodb
+    container_name: inviecom_beta_mongodb
     image: mongo
     restart: always
     ports:
@@ -12,8 +12,8 @@ services:
     volumes:
       - ./backend/mongoims-backup:/data/db
   backend: 
-    image: ghcr.io/ashish8800/inviecom-backend
-    container_name: inviEcom_backend2
+    image: ghcr.io/ashish8800/inviecom_beta-backend
+    container_name: inviEcom_beta_backend
     env_file:
       - backend/.env
     restart: on-failure
@@ -23,8 +23,8 @@ services:
     ports:
      - "5106:5106"
   frontend:
-    image: ghcr.io/ashish8800/inviecom-frontend
-    container_name: inviEcom_frontend2
+    image: ghcr.io/ashish8800/inviecom_beta-frontend
+    container_name: inviEcom_beta_frontend
     env_file:
       - frontend/.env
     depends_on:
